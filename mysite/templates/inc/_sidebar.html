@@ -1,0 +1,9 @@
+{% load news_tags %}
+<div class="list-group">
+    {% get_categories as categories %}
+    {% for link in categories %}
+    <a href="{{ link.get_absolute_url }}" class="list-group-item list-group-item-action " aria-current="true">
+        {{link.title}}
+    </a>
+    {% endfor %}
+</div>
